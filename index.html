@@ -5,41 +5,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-    rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <style>
+        .image-container {
+            position: relative;
+            overflow: hidden;
+        }
+        .image-container img {
+            transition: opacity 0.5s ease-in-out;
+        }
+        .image-container .info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.5s ease-in-out;
+        }
+        .image-container:hover .info {
+            transform: translateY(0);
+        }
+        .image-container:hover img {
+            opacity: 0.5;
+        }
+    </style>
 </head>
-
-
-<body class="bg-zinc-900  overflow-x-hidden">
-    <div class="container h-full  bg-zinc-900">
+<body class="bg-zinc-900 overflow-x-hidden">
+    <div class="container h-full bg-zinc-900">
         <div class="nav w-screen h-20 items-center flex bg-zinc-800">
             <div class="logo mt-2 size-28 cursor-pointer"><img src="Assests/Logo/PACE logo.webp" alt=""></div>
-            <div class="options right-2 absolute "><i class="ri-menu-3-fill text-[40px] cursor-pointer"></i></div>
+            <div class="options right-2 absolute"><i class="ri-menu-3-fill text-[40px] cursor-pointer"></i></div>
         </div>
-        <div class="optionsSilder h-full w-[20%] absolute -right-[20%] top-0 bg-zinc-700 bg-opacity-20 backdrop-blur-sm">
+        <div class="optionsSilder h-full w-[20%] fixed top-0 right-[-20%] bg-zinc-700 bg-opacity-20 backdrop-blur-sm z-10">
             <div class="close"><i class="ri-close-line absolute right-2 text-[40px] mt-2 cursor-pointer"></i></div>
-            <ul class="flex gap-20 text-xl font-semibold flex-col items-center justify-center h-full ">
-                
-                <li>Home</li>
-                <li>Home</li>
-                <li>Home</li>
-                <li>Home</li>
-                <li>Home</li>
+            <ul class="flex gap-20 text-xl font-semibold flex-col items-center justify-center h-full">
+                <li><a href="#about_pace">ABOUT PACE</a></li>
+                <li><a href="#president_desk">PRESIDENT DESK</a></li>
+                <li><a href="#events">EVENTS</a></li>
+                <li><a href="#clubservices">CLUB SERVICES</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
             </ul>
         </div>
 
-        <div class="about flex items-center justify-center mt-10 text-[80px] font-semibold">
+        <div id="about_pace" class="about flex items-center justify-center mt-10 text-[80px] font-semibold">
             <h1>WELCOME TO PACE</h1>
         </div>
+        <div class="group-photo w-[750px] m-auto relative overflow-hidden">
+            <div class="image-container">
+                <img src="Assests/Images/Group photo.jpg" alt="Group photo" class="w-full h-full object-cover">
+                <div class="info">
+                    <h2>This is PACE</h2>
+                </div>
+            </div>
+        </div>
+
+        <div id="president_desk" class="president_desk flex items-center justify-center mt-10 text-[80px] font-semibold">
+            <h1>PRESIDENT DESK</h1>
+        </div>
+        <div class="group-photo w-[800px] m-auto">
+            <div class="image-container">
+                <img src="Assests/Images/Group photo.jpg" alt="" class="bg-cover">
+                <div class="info">
+                    <h2>President Desk</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="about flex items-center justify-center mt-10 text-[80px] font-semibold">
+            <h1>EVENTS AT PACE</h1>
+        </div>
+        <div id="events" class="events flex items-center justify-center gap-10">
+            <div class="image-container h-[30vw] w-[30vw]">
+                <img src="Assests/Images/prudence2.jpeg" alt="" class="bg-cover w-full h-full object-cover">
+                <div class="info">
+                    <h2>Comig soon</h2>
+                </div>
+            </div>
+            <div class="image-container h-[30vw] w-[30vw]">
+                <img src="Assests/Images/prudence2.jpeg" alt="" class="bg-cover w-full h-full object-cover">
+                <div class="info">
+                    <button class="bg-blue-400 p-2 rounded">Register</button>
+                </div>
+            </div>
+            <div class="image-container h-[30vw] w-[30vw]">
+                <img src="Assests/Images/prudence2.jpeg" alt="" class="bg-cover w-full h-full object-cover">
+                <div class="info">
+                    <h2>Coming soon</h2>
+                </div>
+            </div>
+        </div>
+
+        <div id="clubservices" class="about flex items-center justify-center mt-10 text-[80px] font-semibold">
+            <h1>CLUB SERVICES</h1>
+        </div>
+        <div class="events flex items-center justify-center gap-10">
+            <div class="image-container h-[30vw] w-[30vw]">
+                <img src="Assests/Images/prudence2.jpeg" alt="" class="bg-cover w-full h-full object-cover">
+                <div class="info">
+                    <h2>Service 1</h2>
+                </div>
+            </div>
+            <div class="image-container h-[30vw] w-[30vw]">
+                <img src="Assests/Images/prudence2.jpeg" alt="" class="bg-cover w-full h-full object-cover">
+                <div class="info">
+                    <h2>Service 2</h2>
+                </div>
+            </div>
+            <div class="image-container h-[30vw] w-[30vw]">
+                <img src="Assests/Images/prudence2.jpeg" alt="" class="bg-cover w-full h-full object-cover">
+                <div class="info">
+                    <h2>Service 3</h2>
+                </div>
+            </div>
+        </div>
+
+        <div id="gallery" class="about flex items-center justify-center mt-10 text-[80px] font-semibold">
+            <h1>GALLERY</h1>
+        </div>
+        <div class="group-photo w-[800px] m-auto ">
+            <div class="image-container">
+                <img src="Assests/Images/Group photo.jpg" alt="" class="bg-cover">
+                <div class="info">
+                    <h2>Gallery</h2>
+                </div>
+            </div>
+        </div>
     </div>
-    
-    
-
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
